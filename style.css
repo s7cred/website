@@ -1,0 +1,133 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Typography Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    padding: 20px;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background: #005a9c; /* A deep blue to signify depth and stability */
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 2.5em;
+}
+
+/* Navigation Styles (if you add navigation links later) */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+    background: #eaeaea;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 15px;
+}
+
+nav a:hover {
+    background: #ddd;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    background: #005a9c;
+    color: white;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+section p {
+    margin-bottom: 10px;
+}
+
+/* Image Gallery Styles */
+.gallery {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    padding-bottom: 20px;
+}
+
+.photo {
+    position: relative;
+    background: white;
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+    backface-visibility: hidden;
+}
+
+.photo:hover img {
+    transform: scale(1.1);
+}
+
+.label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 90, 156, 0.8); /* Same color as the header for consistency */
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.photo:hover .label {
+    background: rgba(0, 90, 156, 1); /* Slightly darker on hover for effect */
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
